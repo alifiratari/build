@@ -1,0 +1,36 @@
+From d2ef68312ab036fe4ba3505194ad2ea2bd4265b7 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ali=20F=C4=B1rat=20ARI?= <afari@gtu.edu.tr>
+Date: Thu, 27 Sep 2018 03:59:58 +0300
+Subject: [PATCH] Update sun50i-a64-orangepi-win.dts
+
+---
+ .../dts/allwinner/sun50i-a64-orangepi-win.dts    | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts b/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
+index 6109074e36132..e14d1ee3ce91c 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
++++ b/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
+@@ -120,6 +120,22 @@
+ 	status = "okay";
+ };
+ 
++&i2c0 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c0_pins>;
++	status = "okay";
++
++	ctp@14 {
++		pinctrl-names = "default";
++		pinctrl-0 = <&gt911_int_opiwin>;
++		compatible = "goodix,gt911";
++		reg = <0x14>;
++		interrupt-parent = <&pio>;
++		interrupts = <7 8 IRQ_TYPE_LEVEL_HIGH>; /* PH7 */
++		touchscreen-swapped-x-y;
++	};
++};
++
+ &ehci1 {
+ 	status = "okay";
+ };

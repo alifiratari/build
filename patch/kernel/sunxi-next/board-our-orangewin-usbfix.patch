@@ -1,0 +1,28 @@
+From bf96d5d3b802208c90c53d99097ced090d1d7d71 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ali=20F=C4=B1rat=20ARI?= <afari@gtu.edu.tr>
+Date: Thu, 27 Sep 2018 01:47:45 +0300
+Subject: [PATCH] Update sun50i-a64-orangepi-win.dts
+
+---
+ arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts b/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
+index 6109074e36132..03829baf276b0 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
++++ b/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
+@@ -365,14 +365,8 @@
+ 	status = "disabled";
+ };
+ 
+-&usb_otg {
+-	dr_mode = "otg";
+-	status = "okay";
+-};
+ 
+ &usbphy {
+-	usb0_id_det-gpios = <&pio 7 9 GPIO_ACTIVE_HIGH>; /* PH9 */
+-	usb0_vbus-supply = <&reg_drivevbus>;
+ 	usb1_vbus-supply = <&reg_usb1_vbus>;
+ 	status = "okay";
+ };

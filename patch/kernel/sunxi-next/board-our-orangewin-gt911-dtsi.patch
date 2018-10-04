@@ -1,0 +1,30 @@
+From fec21122c45912dbff67e1c4b386c1aaefca11e6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ali=20F=C4=B1rat=20ARI?= <afari@gtu.edu.tr>
+Date: Thu, 27 Sep 2018 04:18:59 +0300
+Subject: [PATCH] Update sun50i-a64.dtsi
+
+---
+ arch/arm64/boot/dts/allwinner/sun50i-a64.dtsi | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-a64.dtsi b/arch/arm64/boot/dts/allwinner/sun50i-a64.dtsi
+index 8c7bcae0b8ec4..a54ec95d9f692 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-a64.dtsi
++++ b/arch/arm64/boot/dts/allwinner/sun50i-a64.dtsi
+@@ -616,6 +616,16 @@
+ 				pins = "PD4", "PD5";
+ 				function = "uart4";
+ 			};
++			
++			gt911_int_opiwin: gt911_int_opiwin {
++				pins = "PH8";
++				function = "gpio_out";
++			};
++			
++			gt911_rst_opiwin: gt911_rst_opiwin {
++				pins = "PH10";
++				function = "gpio_in";
++			};
+ 		};
+ 
+ 		spdif: spdif@1c21000 {

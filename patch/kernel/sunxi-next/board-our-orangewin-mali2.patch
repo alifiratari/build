@@ -1,0 +1,16 @@
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts b/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
+index 6109074..626a8f1 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
++++ b/arch/arm64/boot/dts/allwinner/sun50i-a64-orangepi-win.dts
+@@ -314,6 +314,10 @@
+        vcc-hdmi-supply = <&reg_dldo1>;
+ };
+ 
++&mali {
++       status = "okay";
++};
++
+ &spi0 {
+        status = "okay";
+ 
+
